@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" media="screen"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link href="../static/css/main.css" th:href="@{/css/main.css}"
+          rel="stylesheet" media="screen" />
+
+    <title>TODO LIST</title>
+
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div>
+        <h2>Your tasks</h2>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <!-- <th>Income Id</th> -->
+                <th>Description</th>
+            </tr>
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}">Id</td>
+                <td th:text="${task.description}">Description</td>
+
+                <td><a th:href="${'/task/delete/' + task.id}">Delete</a></td>
+
+            </tr>
+        </table>
+        <a href="#" th:href="@{/task/new}" class="btn btn-primary btn-lg btn-block" role="button">New Task</a>
+    </div>
+</div>
+</body>
+</html>

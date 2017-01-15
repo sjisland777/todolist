@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en">
+
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" media="screen"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href="../static/css/main.css" th:href="@{/css/main.css}"
+      rel="stylesheet" media="screen" />
+    <title>TODO List</title>
+</head>
+
+<body>
+<div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" th:href="@{/tasks}">Tasks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <div class="row text-right">
+            <div class="">
+                <h2>TODO List</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
